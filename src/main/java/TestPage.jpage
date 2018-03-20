@@ -1,0 +1,9 @@
+StringBuffer buffer = new StringBuffer("HBO\\u2120. Epix\\\\u3030 jgjhfg");
+String str = buffer.toString();
+System.out.println("Orig: " + str);
+//System.out.println("Repl: " + java.util.regex.Pattern.compile("\\\\{2}[uU][0-9A-Fa-f]{4}").matcher(str).replaceAll("\\u"));
+java.util.regex.Pattern pattern = java.util.regex.Pattern.compile("\\\\{2}[uU][0-9A-Fa-f]{4}");
+pattern.matcher(str)
+System.out.println("Repl: " + .matcher(str).replaceAll("\\u"));
+//System.out.println("Repl 2 : " + str.replaceAll("\\\\u", "\\u"));
+
