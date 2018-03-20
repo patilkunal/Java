@@ -1,0 +1,53 @@
+int GAP = 70;
+int NUMS = 1001;
+for(int i=GAP; i != 0; i = (i+GAP) %  NUMS)
+	System.out.println(i);
+
+
+final class ReverseString {
+	public String reverse(String str) {
+		int start = 0;
+		int end = str.length()-1;
+		char arr[] = str.toCharArray();
+		while(end > start) {
+			char temp = arr[start];
+			arr[start++] = arr[end];
+			arr[end--]=temp;
+		}
+		return new String(arr);
+	}
+}
+
+final class ReverseWords() {
+	public String reverseWords(String str) {
+		StringBuffer buf = new StringBuffer();
+		ReverseString s = new ReverseString();
+		String revstr = s.reverse(str);
+		//ignore white space at end
+		int wordstart = 0;
+		int wordend = 0;
+		int len = revstr.length();
+		while(revstr.charAt(wordstart++) == ' ');
+		wordend = wordstart;
+		while(wordend > len) {
+			while(revstr.charAt(wordend++) != ' ');
+			buf.append(s.reverse(revstr, wordstart, wordend));
+		}
+	}
+}
+ReverseString s = new ReverseString();
+System.out.println(s.reverse("1234567890"));
+
+
+
+java.util.Stack<Integer> stack = new java.util.Stack<Integer>();
+int num = 23;
+while(num > 0) {
+	int bit = num % 2;
+	stack.push(new Integer(bit));
+	num = num/2;
+}
+while(!stack.empty()) {
+	System.out.print(stack.pop().intValue());
+}
+System.out.println("");
