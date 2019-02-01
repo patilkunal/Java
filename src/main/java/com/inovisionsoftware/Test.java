@@ -1,9 +1,11 @@
 package com.inovisionsoftware;
 
-import sun.security.jca.Providers;
-import java.security.*;
+import java.security.Provider;
 import java.security.Provider.Service;
 
+import sun.security.jca.Providers;
+
+@SuppressWarnings("restriction")
 public class Test {
 	public static void main(String args[]) {
 for (Provider p : Providers.getProviderList().providers()) {
