@@ -35,14 +35,6 @@ public class JourneyToMoon {
             connected = new ArrayList<>();
         }
 
-        public void add(Node<T> node) {
-            connected.add(node);
-        }
-
-        public boolean isConnected(Node<T> node) {
-            return connected.contains(node);
-        }
-
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
